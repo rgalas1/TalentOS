@@ -240,6 +240,8 @@
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .card::before {
@@ -295,11 +297,7 @@
         }
 
         .citation {
-            font-size: 11px;
-            color: var(--accent-dark);
-            vertical-align: super;
-            font-weight: 500;
-            margin-left: 2px;
+            display: none; 
         }
 
         .process-grid {
@@ -337,9 +335,7 @@
         
         .visual-placeholder {
             width: 100%;
-            aspect-ratio: 16/9;
-            background: var(--bg-card);
-            border: 1px dashed var(--border-color);
+            background: transparent;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -348,18 +344,12 @@
             overflow: hidden;
         }
         
-        .visual-placeholder span {
-            color: var(--text-muted);
-            font-size: 14px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-        
         .visual-placeholder img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
             border-radius: 8px;
+            display: block;
         }
 
         .footer {
@@ -397,6 +387,7 @@
                 <li><a href="#strategy">Strategy</a></li>
                 <li><a href="#people">People</a></li>
                 <li><a href="#process">Process</a></li>
+                <li><a href="#metrics">Metrics</a></li>
                 <li><a href="#systems">Systems</a></li>
                 <li><a href="#feedback-loop">The Loop</a></li>
             </ul>
@@ -422,21 +413,21 @@
                 <h2 class="section-title">The Strategy & Commercial Alignment Layer</h2>
             </div>
             
-            <div class="grid-3">
+            <div class="grid-2">
                 <div class="card">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                     </div>
                     <h3 class="card-title">The Alignment Quadrant</h3>
-                    <p class="card-desc">Headcount planning requires a continuous, collaborative rhythm. Recruiting, HR, Operations, and Finance must align at the design phase—not as an afterthought—to assess realistic capacity and target start dates.</p>
+                    <p class="card-desc">Headcount planning requires a continuous, collaborative rhythm. Recruiting, HR, Operations, and Finance must align at the design phase, not as an afterthought, to assess realistic capacity and timelines. By integrating TA directly into commercial strategy, budgeting, and forecasting, teams ensure that hiring plans proactively support revenue goals rather than simply reacting to empty seats.</p>
                 </div>
                 
                 <div class="card">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                     </div>
-                    <h3 class="card-title">Commercial Value Retention</h3>
-                    <p class="card-desc">TA must operate as an "intelligence core." Move beyond vanity metrics like time-to-fill and start translating empty seats into tangible business impacts, such as revenue retention for Go-To-Market and Engineering teams.</p>
+                    <h3 class="card-title">Talent Intelligence</h3>
+                    <p class="card-desc">TA must operate as a 'Talent Intelligence' core. Moving beyond general vanity metrics like time-to-fill, TA should advise the business using live market data and translate hires directly into commercial impact. By aligning intake and onboarding to accelerate time-to-productivity, TA drives measurable value—such as revenue retention for Go-To-Market and Engineering teams.</p>
                 </div>
 
                 <div class="card">
@@ -444,7 +435,15 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     </div>
                     <h3 class="card-title">The Challenger Mentality</h3>
-                    <p class="card-desc">Recruiters must evolve into strategic partners who push back on hiring managers. They should connect specific role requirements back to high-level organizational goals to ensure purposeful hiring.</p>
+                    <p class="card-desc">Recruiters must evolve into strategic partners who deeply understand the wider business context of every requisition. By pushing back on hiring managers and digging into core business challenges, TA ensures that each specific role requirement is purposefully designed to solve actual organizational needs.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h4l2-9 4 18 2-9h4"></path></svg>
+                    </div>
+                    <h3 class="card-title">LLM Employer Branding</h3>
+                    <p class="card-desc">Candidates now query LLMs to research company culture, meaning TA must meet candidates where they are. Because LLMs scrape specific external platforms to form their answers, we must proactively seed those sources with authentic, high-quality content. It is not about faking or tricking the algorithm, but ensuring candidates receive an accurate, human-led picture of the company.</p>
                 </div>
             </div>
         </div>
@@ -463,23 +462,23 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                     </div>
                     <h3 class="card-title">Core Human Elements</h3>
-                    <p class="card-desc">As AI strips away manual tasks, recruiters must focus exclusively on the two most crucial human parts of their roles: deeply engaging candidates and advising the business.</p>
+                    <p class="card-desc">As AI strips away manual tasks, recruiters can finally focus exclusively on the two most crucial human parts of their roles: deeply engaging candidates and advising the business. Automation provides the space needed to elevate TA into a true advisory function.</p>
                 </div>
                 
                 <div class="card">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     </div>
-                    <h3 class="card-title">Skill Set Evolution</h3>
-                    <p class="card-desc">The "Talent Engineer" profile requires high-level executive stakeholder engagement, acute commercial acumen, and an inherent literacy in deploying and testing AI tools.</p>
+                    <h3 class="card-title">Behavioral Adaptability</h3>
+                    <p class="card-desc">The new core competency is behavioral adaptability. As AI frees up capacity, recruiters must remain agile—moving with the market and taking on a broader scope of responsibilities, transitioning seamlessly between mastering new recruitment tech, shaping employer branding, and driving talent operations.</p>
                 </div>
 
                 <div class="card">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
                     </div>
-                    <h3 class="card-title">The Hybrid Orchestrator</h3>
-                    <p class="card-desc">Rather than functioning strictly as recruiters, the new persona demands a hybrid skill set blurring Talent Acquisition and People Operations. This "orchestrator" manages advanced workflows, internal mobility, and complex cross-functional data.</p>
+                    <h3 class="card-title">The Barbell Effect</h3>
+                    <p class="card-desc">TA team structures are bifurcating, heavily favoring two distinct profiles: highly technical "Talent Engineers" managing complex workflows on one end, and high-EQ "Closers" managing executive relationships on the other. Especially within leaner teams, mastering these specialized skill sets is becoming essential.</p>
                 </div>
             </div>
         </div>
@@ -496,24 +495,24 @@
                 <div class="process-item">
                     <div class="process-num">01</div>
                     <div class="process-content">
-                        <h4>The Critical Intake Call</h4>
-                        <p>Established as the single most critical component of the recruiting process. A deep, comprehensive intake creates the unbreakable foundation for AI sourcing, targeted candidate closing, and interview strategy.</p>
+                        <h4>The Deep Intake</h4>
+                        <p>The deep intake call establishes the core context for AI Generation (JDs, Scorecards, and TAM mappings). Because a flawed intake will only automate the wrong search, TA must dig deep early on. AI allows us to move faster, but speed without quality is pointless; we must ensure we aren't moving fast in the wrong direction.</p>
                     </div>
                 </div>
 
                 <div class="process-item">
                     <div class="process-num">02</div>
                     <div class="process-content">
-                        <h4>Defeating the AI Echo Chamber</h4>
-                        <p>Because candidates heavily utilize AI to tailor their CVs, attempting to filter them with AI tools often backfires, as AI models highly rank other AI-generated text. Top teams use strict "knockout" questions early in the funnel and pivot back to targeted outbound sourcing.</p>
+                        <h4>Cutting Through the AI Noise</h4>
+                        <p>High volumes of AI-tailored CVs are escalating into an overwhelming wall of candidate noise. Top teams filter this inbound flood using native ATS capabilities and strict knockout questions. As inbound channels become too polluted, highly targeted outbound sourcing and leveraging networks become crucial to finding top talent.</p>
                     </div>
                 </div>
 
                 <div class="process-item">
                     <div class="process-num">03</div>
                     <div class="process-content">
-                        <h4>The Human-AI Interview Loop</h4>
-                        <p>AI copilots eliminate admin drag by automating note-taking and transcript analysis. The system handles the data, flagging missed questions, identifying candidate gaps and feeding successful signals back to calibrate future scorecards. This unburdens the recruiter, creating the space needed to focus entirely on what algorithms cannot: building genuine rapport, assessing emotional intelligence, and delivering a deeply human-to-human interview experience.</p>
+                        <h4>The Human-in-the-Loop Interview</h4>
+                        <p>AI copilots eliminate admin drag by automating note-taking and transcript analysis. By flagging missed questions, the system ensures recruiters can dig deeper in the moment or guarantee that later interview stages cover any missed ground. This context feeds directly back into scorecards, unburdening the recruiter and prompting highly accurate, evidence-based hiring conversations.</p>
                     </div>
                 </div>
 
@@ -524,21 +523,41 @@
                         <p>To counteract candidates relying on generative AI during interviews, mandate structured scorecards and require candidates to verbally and dynamically explain their thought processes during live case studies.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="process-item">
-                    <div class="process-num">05</div>
-                    <div class="process-content">
-                        <h4>Long-Term Quality of Hire</h4>
-                        <p>Directly link hiring to long-term performance management. Incorporate concrete 6-to-12-month performance goals into the initial position descriptions so candidates enter with transparent expectations, shortening ramp time.</p>
+    <section id="metrics">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">04. Measurement</div>
+                <h2 class="section-title">The Metrics Continuum</h2>
+                <p class="hero-desc" style="margin: 0 auto 40px; font-size: 16px;">TA must move away from outdated, isolated metrics like basic time-to-fill and adopt staged tracking to prove commercial value.</p>
+            </div>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                     </div>
+                    <h3 class="card-title">Market Capture (Leading)</h3>
+                    <p class="card-desc">Offer Acceptance Rate (OAR) acts as the immediate pulse check on TA's closing power and brand strength.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3 class="card-title">Business Acceleration (Mid-Term)</h3>
+                    <p class="card-desc">Time to Productivity validates the intake; if role blueprints are clear, targeted onboarding drastically shortens ramp time.</p>
                 </div>
 
-                <div class="process-item">
-                    <div class="process-num">06</div>
-                    <div class="process-content">
-                        <h4>Isolating Controllable Metrics</h4>
-                        <p>Differentiate between TA "controllables" (like scorecarding and ramp time to productivity) and "uncontrollables" (like 12-month attrition). Focus success benchmarks on what TA actually dictates.</p>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20"></path><path d="M5 20v-5"></path><path d="M11 20V9"></path><path d="M17 20v-8"></path><polyline points="3 15 11 5 17 9 22 4"></polyline></svg>
                     </div>
+                    <h3 class="card-title">Ecosystem Impact (Lagging)</h3>
+                    <p class="card-desc">Quality of Hire measures the net improvement to the team, feeding data back into the system to calibrate the next search.</p>
                 </div>
             </div>
         </div>
@@ -547,7 +566,7 @@
     <section id="systems">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">04. Technology</div>
+                <div class="section-label">05. Technology</div>
                 <h2 class="section-title">Systems: The Tech Stack & AI Integration</h2>
             </div>
             
@@ -580,8 +599,8 @@
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
                     </div>
-                    <h3 class="card-title">Unified Feedback Loops</h3>
-                    <p class="card-desc">The ultimate future state for TA is a fully integrated ecosystem connecting the ATS and HRIS. This generates predictive quality-of-hire metrics by linking initial candidate scoring directly to long-term employee performance data.</p>
+                    <h3 class="card-title">The Context Backend</h3>
+                    <p class="card-desc">The ultimate future state for TA is a dynamically updating context backend connecting the ATS and HRIS. This generates a continuously evolving dataset, linking initial candidate scoring directly to long-term employee performance data.</p>
                 </div>
             </div>
         </div>
@@ -590,9 +609,9 @@
     <section id="feedback-loop" style="border-bottom: none;">
         <div class="container">
             <div class="section-header" style="max-width: 100%; text-align: center;">
-                <div class="section-label" style="justify-content: center;">05. The TA Team OS Blueprint</div>
+                <div class="section-label" style="justify-content: center;">06. The TA Team OS Blueprint</div>
                 <h2 class="section-title">The Unified Feedback Loop</h2>
-                <p class="hero-desc" style="margin: 0 auto;">A dynamically updating context backend that connects the entire talent lifecycle—from the deep intake call through to the 12-month performance review—ensuring pristine context for both AI and human collaborators.</p>
+                <p class="hero-desc" style="margin: 0 auto;">A dynamically updating context backend that connects the entire talent lifecycle from the Deep Intake Call through to 6 & 12 Month Performance driving higher success rates, an optimized process, and higher ROI.</p>
             </div>
             
             <div class="visual-placeholder">
